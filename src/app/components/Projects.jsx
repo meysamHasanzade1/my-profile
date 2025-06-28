@@ -13,7 +13,7 @@ function Projects() {
         {Video_data.map(({ projectLink, videoLink, description, index }) => (
           <div
             key={index}
-            className="bg-inherit max-w-[25rem] border-2 rounded-sm  hover:border-blue-200 transition delay-150 duration-300"
+            className="bg-inherit max-w-[25rem]  max-h-[350px] overflow-auto border-2 rounded-sm  hover:border-blue-200 transition delay-150 duration-300"
           >
             <Link target="_blank" href={projectLink}>
               <video
