@@ -78,7 +78,7 @@ export const Skills_data = [
 
 export const Video_data = [
   {
-    projectLink: "https://admin-dashboard-eight-wine-79.vercel.app/",
+    projectLink: "https://admin-dashboard-nu-sand-92.vercel.app/login",
     videoLink: "./videoProjects/adminDashboard.mp4",
     description:
       "An admin dashboard has the ability to CRUD operations on users and products. The database of this page works with Prisma and Sopbase. And it has a login page with username and password to go to the dashboard page. After logging in, you can log out by clicking on logout.(Being completed)",
