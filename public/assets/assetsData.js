@@ -82,6 +82,7 @@ export const Video_data = [
     videoLink: "./videoProjects/adminDashboard.mp4",
     description:
       "An admin dashboard has the ability to CRUD operations on users and products. The database of this page works with Prisma and Sopbase. And it has a login page with username and password to go to the dashboard page. After logging in, you can log out by clicking on logout.(Being completed)",
+    poster: ".admin.jpg/",
     index: 0,
   },
   {
@@ -89,6 +90,7 @@ export const Video_data = [
     videoLink: "./videoProjects/My Profile.mp4",
     description:
       "This is my profile page. On this page you can download and view my personal resume. My profession and skills, education... are mentioned and links to my projects and a short video of each project are provided. You can email me in the contact section.",
+    poster: "./quickby.jpg",
     index: 1,
   },
   {
@@ -96,7 +98,7 @@ export const Video_data = [
     videoLink: "./videoProjects/quickby.mp4",
     description:
       "Description:Design and development of an online store by takingmultiple product APIs and displaying them dynamically.Languages:HTML&css , javaScript.",
-
+    poster: "./quickby.jpg",
     index: 2,
   },
   {
@@ -104,6 +106,7 @@ export const Video_data = [
     videoLink: "./videoProjects/Coursesonline.mp4",
     description:
       "Description: Designing an online course page with professorintroductions and student comments Languages: HTML&css ,javaScript.",
+    poster: "./courseOnline.jpg",
     index: 3,
   },
   {
@@ -111,6 +114,7 @@ export const Video_data = [
     videoLink: "./videoProjects/WeatherApp.mp4",
     description:
       "Description: Development and design of a weather application withthe ability to search for city names Languages:HTML&css ,javaScript.",
+    poster: "./WeatherApp.jpg",
     index: 4,
   },
   {
@@ -118,6 +122,7 @@ export const Video_data = [
     videoLink: "./videoProjects/Univercity.mp4",
     description:
       "Description: Creating a university page that scrolls throughdifferent sections of the page by clicking on links and sendingemails practically to my Gmail. Languages: react",
+    poster: "./university.jpg",
     index: 5,
   },
 ];
