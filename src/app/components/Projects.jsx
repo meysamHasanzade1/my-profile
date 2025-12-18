@@ -10,13 +10,13 @@ function Projects() {
     >
       <h1 className="text-4xl text-center">My Projects</h1>
 
-      <div className="flex flex-wrap xl:justify-normal justify-center max-w-[85em] mt-7 items-center gap-15">
-        {Video_data.map(({ projectLink, videoLink, description, index }) => (
+      <div className="flex flex-wrap xl:justify-normal justify-center max-w-[85em] mt-7 items-center gap-6">
+        {Video_data.map((item, i) => (
           <ProjectCard
-            key={index}
-            projectLink={projectLink}
-            videoLink={videoLink}
-            description={description}
+            key={item.id} // ✅ اگر id موجود نبود، از index استفاده می‌کنیم
+            projectLink={item.projectLink}
+            videoLink={item.videoLink}
+            description={item.description}
           />
         ))}
       </div>
@@ -27,41 +27,38 @@ function Projects() {
 export default Projects;
 
 function ProjectCard({ projectLink, videoLink, description, poster }) {
-  const videoRef = useRef(null);
+  const videoRef = useRef();
 
   const handleMouseEnter = () => {
     const video = videoRef.current;
-
-    // سورس فقط در اولین هاور ست می‌شود
-    if (!video.src) {
-      video.src = videoLink;
-    }
-
-    video.play();
+    if (video) video.play();
   };
 
   const handleMouseLeave = () => {
     const video = videoRef.current;
-    video.pause();
-    video.currentTime = 0;
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
   };
 
   return (
-    <div className="bg-inherit max-w-[25rem] max-h-[350px] overflow-auto border-2 rounded-sm hover:border-blue-200 transition delay-150 duration-300">
+    <div className="bg-inherit max-w-[25rem] max-h-[350px] overflow-hidden border-2 rounded-sm hover:border-blue-200 transition duration-300">
       <Link target="_blank" href={projectLink}>
         <video
           ref={videoRef}
-          preload="none"
+          preload="metadata" // ✅ metadata preload می‌کنیم تا poster همیشه نمایش داده شود
           muted
           loop
           width={400}
           height={200}
-          className="rounded-t-sm w-[100%]"
-          poster={poster} // یک تصویر سبک ۲۰kb بگذارید
+          className="rounded-t-sm w-full object-cover"
+          poster={poster}
+          src={videoLink} // ⚡ src از ابتدا ست شده تا تصویر poster نمایش داده شود
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         />
-        <p className="p-2">{description}</p>
+        <p className="p-2 text-sm text-gray-700">{description}</p>
       </Link>
     </div>
   );
