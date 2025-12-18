@@ -16,6 +16,7 @@ function Projects() {
             key={item.id} // ✅ اگر id موجود نبود، از index استفاده می‌کنیم
             projectLink={item.projectLink}
             videoLink={item.videoLink}
+            poster={item.poster}
             description={item.description}
           />
         ))}
