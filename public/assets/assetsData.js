@@ -74,6 +74,18 @@ export const Skills_data = [
     width: 80,
     height: 80,
   },
+  {
+    skillName: "git",
+    Image: "/icons8-git-48.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skillName: "github",
+    Image: "/icons8-github-logo-64.png",
+    width: 80,
+    height: 80,
+  },
 ];
 
 export const Video_data = [
